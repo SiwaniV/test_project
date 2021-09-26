@@ -17,16 +17,16 @@
         {% endblock %}
 
         <style>
-            .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-            .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-
-            .bg-banner{
+            body{
                 background-image: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-position: center;
-
+                background-attachment: fixed;
             }
+
+
+            .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+            .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 
             .required {
                 color: white;
@@ -45,7 +45,7 @@
 
     <body>
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column bg-banner">
+    <div class="d-flex h-100 p-3 mx-auto flex-column bg-banner">
     <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3">
         <h5 class="my-0 mr-md-auto font-weight-normal text-white">Company name</h5>
         <nav class="my-2 my-md-0 mr-md-3">
@@ -57,11 +57,11 @@
         <a class="btn btn-outline-light" href="#">Meld aan</a>
     </header>
 
-    <main class="container mt-5">
+    <main class="container mt-4 p-3 mb-4">
         {% block body %}{% endblock %}
     </main>
 
-        <footer class="container pt-4 my-md-5 pt-md-5 border-top text-white">
+        <footer class="container my-md-5 pt-md-5 border-top text-white">
             <div class="row">
                 <div class="col-12 col-md">
                     <i class="bi bi-bootstrap"></i>
@@ -87,15 +87,7 @@
                         <li><a class="text-light" href="#">Final resource</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-md">
-                    <h5>About</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-light" href="#">Team</a></li>
-                        <li><a class="text-light" href="#">Locations</a></li>
-                        <li><a class="text-light" href="#">Privacy</a></li>
-                        <li><a class="text-light" href="#">Terms</a></li>
-                    </ul>
-                </div>
+
             </div>
         </footer>
     </div>
