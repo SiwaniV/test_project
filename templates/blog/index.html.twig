@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Blog index</h1>
 
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -23,8 +23,8 @@
                 <td>{{ blog.body }}</td>
                 <td>{{ blog.updatedAt ? blog.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('blog_show', {'id': blog.id}) }}">show</a>
-                    <a href="{{ path('blog_edit', {'id': blog.id}) }}">edit</a>
+                    <a class="text-dark" href="{{ path('blog_show', {'id': blog.id}) }}">show</a>
+                    <a class="text-dark" href="{{ path('blog_edit', {'id': blog.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +35,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('blog_new') }}">Create new</a>
+    <a class="btn btn-dark" href="{{ path('blog_new') }}">Create new</a>
 {% endblock %}
