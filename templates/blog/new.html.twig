@@ -3,9 +3,9 @@
 {% block title %}New Blog{% endblock %}
 
 {% block body %}
-    <h1>Create new Blog</h1>
+    <h1 class="text-white">Create new Blog</h1>
 
     {{ include('blog/_form.html.twig') }}
 
-    <a class="text-dark" href="{{ path('blog_index') }}">back to list</a>
+    <a class="text-white" href="{{ path('blog_index') }}">back to list</a>
 {% endblock %}

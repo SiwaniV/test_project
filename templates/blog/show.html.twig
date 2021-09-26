@@ -3,9 +3,9 @@
 {% block title %}Blog{% endblock %}
 
 {% block body %}
-    <h1>Blog</h1>
+    <h1 class="text-white">Blog</h1>
 
-    <table class="table">
+    <table class="table table-dark text-white">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -26,7 +26,7 @@
         </tbody>
     </table>
 
-    <a class="text-dark" href="{{ path('blog_index') }}">back to list</a><br>
+    <a class="text-light" href="{{ path('blog_index') }}">back to list</a><br>
 
     <a class="btn btn-dark mt-2" href="{{ path('blog_edit', {'id': blog.id}) }}">edit</a>
 

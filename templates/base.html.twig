@@ -9,6 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- Custom styles for this template -->
         {% block stylesheets %}
@@ -18,66 +19,86 @@
         <style>
             .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
             .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
+            .bg-banner{
+                background-image: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .required {
+                color: white;
+            }
+
+            .col-form-label {
+                color: white;
+            }
+            label {
+                color: white;
+            }
+
         </style>
 
     </head>
 
     <body>
 
-    <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column bg-banner">
+    <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3">
+        <h5 class="my-0 mr-md-auto font-weight-normal text-white">Company name</h5>
         <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="http://127.0.0.1:8000/test_project/public/default">Home</a>
-            <a class="p-2 text-dark" href="http://127.0.0.1:8000/test_project/public/product">Product</a>
-            <a class="p-2 text-dark" href="http://127.0.0.1:8000/test_project/public/blog/">Blog</a>
-            <a class="p-2 text-dark" href="#">Admin</a>
+            <a class="p-2 text-white" href="http://127.0.0.1:8000/test_project/public/default">Home</a>
+            <a class="p-2 text-white" href="http://127.0.0.1:8000/test_project/public/product">Product</a>
+            <a class="p-2 text-white" href="http://127.0.0.1:8000/test_project/public/blog/">Blog</a>
+            <a class="p-2 text-white" href="#">Admin</a>
         </nav>
-        <a class="btn btn-outline-primary" href="#">Meld aan</a>
+        <a class="btn btn-outline-light" href="#">Meld aan</a>
     </header>
 
     <main class="container mt-5">
         {% block body %}{% endblock %}
     </main>
 
-        <footer class="container pt-4 my-md-5 pt-md-5 border-top">
+        <footer class="container pt-4 my-md-5 pt-md-5 border-top text-white">
             <div class="row">
                 <div class="col-12 col-md">
-                    <img class="mb-2" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-                    <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+                    <i class="bi bi-bootstrap"></i>
+                    <small class="d-block mb-3 text-light mt-2">&copy; Siwani Veerakathy 2021</small>
                 </div>
                 <div class="col-6 col-md">
                     <h5>Features</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Cool stuff</a></li>
-                        <li><a class="text-muted" href="#">Random feature</a></li>
-                        <li><a class="text-muted" href="#">Team feature</a></li>
-                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                        <li><a class="text-muted" href="#">Another one</a></li>
-                        <li><a class="text-muted" href="#">Last time</a></li>
+                        <li><a class="text-light" href="#">Cool stuff</a></li>
+                        <li><a class="text-light" href="#">Random feature</a></li>
+                        <li><a class="text-light" href="#">Team feature</a></li>
+                        <li><a class="text-light" href="#">Stuff for developers</a></li>
+                        <li><a class="text-light" href="#">Another one</a></li>
+                        <li><a class="text-light" href="#">Last time</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h5>Resources</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Resource</a></li>
-                        <li><a class="text-muted" href="#">Resource name</a></li>
-                        <li><a class="text-muted" href="#">Another resource</a></li>
-                        <li><a class="text-muted" href="#">Final resource</a></li>
+                        <li><a class="text-light" href="#">Resource</a></li>
+                        <li><a class="text-light" href="#">Resource name</a></li>
+                        <li><a class="text-light" href="#">Another resource</a></li>
+                        <li><a class="text-light" href="#">Final resource</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h5>About</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Team</a></li>
-                        <li><a class="text-muted" href="#">Locations</a></li>
-                        <li><a class="text-muted" href="#">Privacy</a></li>
-                        <li><a class="text-muted" href="#">Terms</a></li>
+                        <li><a class="text-light" href="#">Team</a></li>
+                        <li><a class="text-light" href="#">Locations</a></li>
+                        <li><a class="text-light" href="#">Privacy</a></li>
+                        <li><a class="text-light" href="#">Terms</a></li>
                     </ul>
                 </div>
             </div>
         </footer>
     </div>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
