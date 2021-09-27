@@ -5,8 +5,8 @@
 {% block body %}
     <h1 class="text-white">Blog index</h1>
 
-    <table class="table table-dark">
-        <thead>
+    <table class="table table-light">
+        <thead class="thead-dark">
             <tr>
                 <th>Id</th>
                 <th>Seotext</th>
@@ -23,8 +23,8 @@
                 <td>{{ blog.body }}</td>
                 <td>{{ blog.updatedAt ? blog.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a class="text-light" href="{{ path('blog_show', {'id': blog.id}) }}">show</a>
-                    <a class="text-light" href="{{ path('blog_edit', {'id': blog.id}) }}">edit</a>
+                    <a class="text-dark" href="{{ path('blog_show', {'id': blog.id}) }}">show</a>
+                    <a class="text-dark" href="{{ path('blog_edit', {'id': blog.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
