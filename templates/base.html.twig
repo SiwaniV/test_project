@@ -72,7 +72,11 @@
                     {% if sform is defined %}
                     {% include 'default/_form.html.twig' %}
                     {% endif %}
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="button">Aanmelden</button>
+                    {% if app.user %}
+                    <a class="btn btn-outline-light my-2 my-sm-0" type="button" href="/logout">Sign out</a>
+                    {% else %}
+                    <a class="btn btn-outline-light my-2 my-sm-0" type="button" href="/login">Sign up</a>
+                    {% endif %}
                 </form>
             </div>
         </nav>
