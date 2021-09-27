@@ -45,16 +45,35 @@
 
     <body>
 
-    <div class="d-flex h-100 p-3 mx-auto flex-column bg-banner">
-    <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3">
-        <h5 class="my-0 mr-md-auto font-weight-normal text-white">Company name</h5>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-white" href="http://127.0.0.1:8000/test_project/public/default">Home</a>
-            <a class="p-2 text-white" href="http://127.0.0.1:8000/test_project/public/product">Product</a>
-            <a class="p-2 text-white" href="http://127.0.0.1:8000/test_project/public/blog/">Blog</a>
-            <a class="p-2 text-white" href="#">Admin</a>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light p-3 m-2">
+            <a class="navbar-brand text-white disabled">Company name</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/test_project/public/default">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/test_project/public/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/test_project/public/product">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Admin</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="button">Aanmelden</button>
+                </form>
+            </div>
         </nav>
-        <a class="btn btn-outline-light" href="#">Meld aan</a>
     </header>
 
     <main class="container mt-4 p-3 mb-4">
@@ -90,7 +109,7 @@
 
             </div>
         </footer>
-    </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
