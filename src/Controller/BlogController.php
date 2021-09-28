@@ -77,7 +77,6 @@ class BlogController extends AbstractController
             $entityManager->remove($blog);
             $entityManager->flush();
         }
-
         return $this->redirectToRoute('blog_index', [], Response::HTTP_SEE_OTHER);
     }
 
