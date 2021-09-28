@@ -72,7 +72,7 @@ class BlogController extends AbstractController
     #[Route('/{id}', name: 'blog_delete', methods: ['POST'])]
     public function delete(Request $request, Blog $blog): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$blog->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $blog->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($blog);
             $entityManager->flush();
@@ -80,4 +80,8 @@ class BlogController extends AbstractController
 
         return $this->redirectToRoute('blog_index', [], Response::HTTP_SEE_OTHER);
     }
+
+
+  
+
 }
