@@ -1,7 +1,7 @@
 # test_project
 
-✔️ Basisapplicatie
-✔️ Crud product
-✔️ Crud Blog
-✔️ EasyAdmin
+✔️ Basisapplicatie <br>
+✔️ Crud product <br>
+✔️ Crud Blog <br>
+✔️ EasyAdmin <br>
 ✔️ Inlog/registratie systeem
