@@ -51,7 +51,13 @@ class BlogController extends AbstractController
         ]);
     }
 
-    
+
+    #[Route('/{slug}', name:'blog_seoshow', methods: ['GET'])]
+    public function seoshow(string $slug, BlogRepository $blogRepository): Response
+    {
+        $blog = $blogRepository->findOneBy(['seotext' => $slug]);
+        return $this->render('blog/show.html.twig', ['blog' => $blog,]);
+    }
 
     #[Route('/{id}/edit', name: 'blog_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Blog $blog): Response
