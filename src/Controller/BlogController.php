@@ -51,6 +51,8 @@ class BlogController extends AbstractController
         ]);
     }
 
+    
+
     #[Route('/{id}/edit', name: 'blog_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Blog $blog): Response
     {
@@ -79,8 +81,6 @@ class BlogController extends AbstractController
         }
         return $this->redirectToRoute('blog_index', [], Response::HTTP_SEE_OTHER);
     }
-
-
 
 
 }
