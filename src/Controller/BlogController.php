@@ -52,11 +52,16 @@ class BlogController extends AbstractController
     }
 
 
-    #[Route('/{slug}', name:'blog_seoshow', methods: ['GET'])]
+    #[Route('/seo/{slug}', name:'blog_seoshow', methods: ['GET'])]
     public function seoshow(string $slug, BlogRepository $blogRepository): Response
     {
         $blog = $blogRepository->findOneBy(['seotext' => $slug]);
+        if($blog){
         return $this->render('blog/show.html.twig', ['blog' => $blog,]);
+    } else {
+            return $this->redirectToRoute('blog_index');
+        }
+
     }
 
     #[Route('/{id}/edit', name: 'blog_edit', methods: ['GET', 'POST'])]
