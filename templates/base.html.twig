@@ -72,11 +72,15 @@
                     {% if sform is defined %}
                     {% include 'default/_form.html.twig' %}
                     {% endif %}
+<<<<<<< HEAD
                     {% if app.user %}
                     <a class="btn btn-outline-light my-2 my-sm-0" href="{{ path('app_logout') }}">Sign out</a>
                     {% else %}
                     <a class="btn btn-outline-light my-2 my-sm-0" href="{{ path('app_login') }}">Sign up</a>
                     {% endif %}
+=======
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="button">Aanmelden</button>
+>>>>>>> parent of 99add47 (login/registratie gemaakt)
                 </form>
             </div>
         </nav>
