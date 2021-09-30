@@ -11,12 +11,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-    #[Route('/default', name: 'default')]
+    #[Route('/', name: 'default')]
     public function index(Request $request, BlogRepository $blogRepository): Response
     {
         $form = $this->createForm(SearchType::class);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
             $blogs = $blogRepository->findBySearch($form->getViewData()['zoeken']);
             return $this->render('blog/index.html.twig', [
