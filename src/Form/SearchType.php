@@ -18,8 +18,7 @@ class SearchType extends AbstractType
             'placeholder' => 'Zoeken',
         'style' => 'width: 75%',
     ],
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
