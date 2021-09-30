@@ -23,7 +23,6 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-
             ->setTitle('<img style="height: 25px" src="https://icon-library.com/images/icon-profile/icon-profile-22.jpg"><span class="text-small">&nbsp;&nbsp;Admin Siwani</span>')
         ;
     }
