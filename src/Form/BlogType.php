@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Blog;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -13,8 +14,9 @@ class BlogType extends AbstractType
     {
         $builder
             ->add('seotext')
-            ->add('body')
-            ->add('updatedAt')
+            ->add('body', CKEditorType::class, ['label' => 'body', 'config' => array('toolbar', 'full'),
+                ])
+            -> add('updatedAt')
         ;
     }
 
